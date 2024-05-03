@@ -2,7 +2,7 @@ from nba_api.stats.static import players
 from nba_api.stats.endpoints import PlayerCareerStats
 import pandas as pd
 
-# Get's the player ID and active status
+# Get player ID & active stats
 def get_player_id(player_name):
     player_dict = players.get_players()
     find_player = next((player for player in player_dict if player['full_name'] == player_name), None)
@@ -11,7 +11,7 @@ def get_player_id(player_name):
     else:
         return None, None
 
-# Get player stats and add's to a dataframe
+# Get player stats -> add to dataframe
 def get_player_stats(player_id):
     career_stats = PlayerCareerStats(player_id)
     career_df = career_stats.get_data_frames()[0]
@@ -27,7 +27,7 @@ def display_season_stats(player_stats):
     else:
         print("No stats available for the current season.")
 
-# Loop and function exec's
+# Loop and function calls
 def main():
     while True:
         player_name = input('Player name: ')
