@@ -12,7 +12,9 @@ pip install nba_api
 
 ## Usage
 
-Just run the script `nba_player_stats.py` and input a player name. The script is case sensitive.
+Just run the script `nba_player_stats.py` and input a player name.
+
+The script is case sensitive.
 
 ## Contributing
 
